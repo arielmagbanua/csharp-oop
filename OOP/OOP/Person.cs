@@ -8,7 +8,7 @@
 
         public void Walk()
         {
-            Console.WriteLine("WAlking!!!");
+            Console.WriteLine("Walking!!!");
         }
     }
 }
