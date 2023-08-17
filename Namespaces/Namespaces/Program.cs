@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Group1;
+using Group2;
+
+ClassB classB = new ClassB();
