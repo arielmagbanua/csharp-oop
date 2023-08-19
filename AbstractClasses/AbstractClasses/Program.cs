@@ -1,12 +1,13 @@
 ﻿using AbstractClasses;
 
-Cat dexter = new Cat("Dexter");
-
 Lion lion = new Lion("Zimba");
 lion.MakeSound();
 lion.Eat("Chicken");
 
-// dexter.MakeSound(5);
+Cat dexter = new Cat("Dexter");
+dexter.Eat("Cat food");
+dexter.MakeSound(5);
 
-// Dog bogart = new Dog("Bogart");
-// bogart.MakeSound(3);
+Dog bogart = new Dog("Bogart");
+bogart.Eat("Dog food");
+bogart.MakeSound(3);
