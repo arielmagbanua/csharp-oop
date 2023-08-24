@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LowCohesiobn\" />
+    <None Remove="TightCoupling\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LowCohesiobn\" />
+    <Folder Include="TightCoupling\" />
+  </ItemGroup>
+</Project>
