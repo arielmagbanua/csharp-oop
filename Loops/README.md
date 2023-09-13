@@ -2,8 +2,7 @@
 
 A loop is used to repeat a block of code until the specified condition is met.
 
-![loops](loops.png|width=100px)
-<img src='loops.png' width='100'>
+<img src='loops.png' width='500'>
 
 ## For Loop
 
