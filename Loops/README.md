@@ -2,7 +2,9 @@
 
 A loop is used to repeat a block of code until the specified condition is met.
 
-<img src='loops.png' width='500'>
+<p align="center">
+    <img src='loops.png' width='800'>
+</p>
 
 ## For Loop
 
