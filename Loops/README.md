@@ -32,3 +32,22 @@ while (num < 5) {
 # output
 0 1 2 3 4 
 ```
+
+## Do-While Loop
+
+```csharp
+int x = 0;
+do
+{
+    Console.WriteLine(x);
+    x++;
+} while (x < 5);
+```
+```shell
+# output
+0
+1
+2
+3
+4
+```
