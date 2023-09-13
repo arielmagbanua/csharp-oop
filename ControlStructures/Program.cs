@@ -20,3 +20,26 @@ switch (weekNumber) {
         Console.WriteLine("Invalid");
         break;
 }
+
+
+double grade = 80.0;
+
+if (grade >= 75.0)
+{
+    if (grade >= 90.0)
+    {
+        Console.WriteLine("Excellent!!!");
+    }
+    else if (grade >= 80.0 && grade < 90.0)
+    {
+        Console.WriteLine("Nice!!!");
+    }
+    else
+    {
+        Console.WriteLine("Passed!!!");
+    }
+}
+else
+{
+    Console.WriteLine("Failed!!!");
+}
