@@ -2,7 +2,7 @@
 
 A loop is used to repeat a block of code until the specified condition is met.
 
-![Loops](/loops.png =300x200)
+![Loops|300x200](/loops.png)
 
 ## For Loop
 
