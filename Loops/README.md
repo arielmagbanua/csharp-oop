@@ -51,3 +51,8 @@ do
 3
 4
 ```
+
+
+# Break and Continue Keywords
+
+The **break** statement terminates the closest enclosing loop statement (that is, _for_, _foreach_, _while_, or _do_) or _switch_ statement.

@@ -1,4 +1,9 @@
-﻿for (int i = 0; i < 5; i++)
+﻿var numbers = new int[] { 2, 4, 5, 6 };
+for (int i = 0; i < numbers.Length; i++) {
+    Console.WriteLine(numbers[i]);
+}
+
+for (int i = 0; i < 5; i++)
 {
     Console.Write(i + " ");
 }
