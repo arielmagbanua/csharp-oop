@@ -60,5 +60,20 @@ namespace TodoApp.Data
                 return _instance;
             }
         }
+
+        public bool CreateUser(User user)
+        {
+            var createUserCommand = _connection?.CreateCommand();
+
+            int isAdmin = user.IsAdmin ? 1 : 0;
+
+            string insertSQL = $@"
+                INSERT INTO users (first_name, last_name, email, password, is_admin)
+                VALUES ('{user.FirstName}', '{user.LastName}', '{user.Email}', '{user.Password}', '{isAdmin}')";
+
+            createUserCommand.CommandText = insertSQL;
+
+            return createUserCommand.ExecuteNonQuery() > 0;
+        }
     }
 }
