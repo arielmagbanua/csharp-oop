@@ -1,4 +1,4 @@
-﻿namespace TodoApp
+﻿namespace TodoApp.Screens
 {
     public partial class SignUp : Form
     {
