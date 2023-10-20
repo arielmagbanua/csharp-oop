@@ -30,8 +30,8 @@
         {
             lblUsername = new Label();
             lblPassword = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtLoginEmail = new TextBox();
+            txtLoginPassword = new TextBox();
             label1 = new Label();
             btnLogin = new Button();
             btnSignUp = new Button();
@@ -55,19 +55,20 @@
             lblPassword.TabIndex = 1;
             lblPassword.Text = "Password: ";
             // 
-            // textBox1
+            // txtLoginEmail
             // 
-            textBox1.Location = new Point(277, 58);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(417, 39);
-            textBox1.TabIndex = 2;
+            txtLoginEmail.Location = new Point(277, 58);
+            txtLoginEmail.Name = "txtLoginEmail";
+            txtLoginEmail.Size = new Size(417, 39);
+            txtLoginEmail.TabIndex = 2;
             // 
-            // textBox2
+            // txtLoginPassword
             // 
-            textBox2.Location = new Point(277, 141);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(417, 39);
-            textBox2.TabIndex = 3;
+            txtLoginPassword.Location = new Point(277, 141);
+            txtLoginPassword.Name = "txtLoginPassword";
+            txtLoginPassword.PasswordChar = '*';
+            txtLoginPassword.Size = new Size(417, 39);
+            txtLoginPassword.TabIndex = 3;
             // 
             // label1
             // 
@@ -105,12 +106,13 @@
             Controls.Add(btnSignUp);
             Controls.Add(btnLogin);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtLoginPassword);
+            Controls.Add(txtLoginEmail);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -119,8 +121,8 @@
 
         private Label lblUsername;
         private Label lblPassword;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtLoginEmail;
+        private TextBox txtLoginPassword;
         private Label label1;
         private Button btnLogin;
         private Button btnSignUp;
