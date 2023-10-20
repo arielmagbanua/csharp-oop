@@ -1,3 +1,5 @@
+using TodoApp.Data;
+
 namespace TodoApp.Screens
 {
     public partial class Login : Form
@@ -20,7 +22,26 @@ namespace TodoApp.Screens
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            var email = txtLoginEmail.Text;
+            var password = txtLoginPassword.Text;
 
+            var user = DBHelper.Instance.GetUserByEmail(email);
+            if (user == null)
+            {
+                MessageBox.Show("Invalid User", "Invalid User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!password.Equals(user.Password)) {
+                MessageBox.Show("Invalid Credentials", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var todoScreen = new TodoScreen();
+            todoScreen.Tag = this;
+            todoScreen.Show(this);
+
+            this.Hide();
         }
     }
 }

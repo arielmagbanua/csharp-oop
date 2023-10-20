@@ -111,6 +111,36 @@ namespace TodoApp.Data
             return user;
         }
 
+        public User? GetUserByEmail(string email)
+        {
+            var getUserCommand = _connection!.CreateCommand();
+            getUserCommand.CommandText = @$"
+                SELECT * FROM users WHERE email = '{email}'
+            ";
+
+            var reader = getUserCommand.ExecuteReader();
+
+            if (reader.Read()) {
+                var userId = reader.GetInt32(0);
+                var firstName = reader.GetString(1);
+                var lastName = reader.GetString(2);
+                var userEmail = reader.GetString(3);
+                var password = reader.GetString(4);
+                var isAdmin = reader.GetInt32(5);
+
+                var user = new User();
+                user.Id = userId;
+                user.FirstName = firstName;
+                user.LastName = lastName;
+                user.Email = userEmail;
+                user.Password = password;
+                user.IsAdmin = isAdmin == 1;
+                return user;
+            }
+
+            return null;
+        }
+
         /// <summary>
         /// This retrieve the id of the user using an email.
         /// </summary>
