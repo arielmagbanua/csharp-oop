@@ -1,6 +1,6 @@
 ﻿namespace TodoApp
 {
-    partial class frmLogin
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -85,6 +85,7 @@
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += BtnLogin_Click;
             // 
             // btnSignUp
             // 
@@ -94,8 +95,9 @@
             btnSignUp.TabIndex = 6;
             btnSignUp.Text = "Sign-up";
             btnSignUp.UseVisualStyleBackColor = true;
+            btnSignUp.Click += BtnSignUp_Click;
             // 
-            // frmLogin
+            // Login
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -107,8 +109,9 @@
             Controls.Add(textBox1);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
-            Name = "frmLogin";
+            Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
