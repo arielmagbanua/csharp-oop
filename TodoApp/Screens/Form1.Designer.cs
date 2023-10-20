@@ -1,4 +1,4 @@
-﻿namespace TodoApp
+﻿namespace TodoApp.Screens
 {
     partial class Login
     {
@@ -111,7 +111,6 @@
             Controls.Add(lblUsername);
             Name = "Login";
             Text = "Login";
-            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }

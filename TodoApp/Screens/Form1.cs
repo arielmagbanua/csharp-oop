@@ -1,4 +1,4 @@
-namespace TodoApp
+namespace TodoApp.Screens
 {
     public partial class Login : Form
     {
@@ -16,11 +16,6 @@ namespace TodoApp
 
             // hide the login form
             this.Hide();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
