@@ -163,6 +163,7 @@
             Controls.Add(lblFirstName);
             Name = "SignUp";
             Text = "SignUp";
+            Load += SignUp_Load;
             ResumeLayout(false);
             PerformLayout();
         }

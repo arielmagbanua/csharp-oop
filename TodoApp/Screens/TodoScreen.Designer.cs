@@ -28,33 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblFirstName = new Label();
-            lblLastName = new Label();
+            lblName = new Label();
             lvTodo = new ListView();
             idHeader = new ColumnHeader();
             titleHeader = new ColumnHeader();
             descriptionHeader = new ColumnHeader();
             createdAtHeader = new ColumnHeader();
             statusHeader = new ColumnHeader();
+            btnAddTodo = new Button();
+            btnLogout = new Button();
             SuspendLayout();
             // 
-            // lblFirstName
+            // lblName
             // 
-            lblFirstName.AutoSize = true;
-            lblFirstName.Location = new Point(46, 33);
-            lblFirstName.Name = "lblFirstName";
-            lblFirstName.Size = new Size(146, 32);
-            lblFirstName.TabIndex = 0;
-            lblFirstName.Text = "FIRST NAME";
-            // 
-            // lblLastName
-            // 
-            lblLastName.AutoSize = true;
-            lblLastName.Location = new Point(198, 33);
-            lblLastName.Name = "lblLastName";
-            lblLastName.Size = new Size(141, 32);
-            lblLastName.TabIndex = 1;
-            lblLastName.Text = "LAST NAME";
+            lblName.AutoSize = true;
+            lblName.Location = new Point(46, 33);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(81, 32);
+            lblName.TabIndex = 0;
+            lblName.Text = "NAME";
             // 
             // lvTodo
             // 
@@ -92,16 +84,39 @@
             statusHeader.Text = "Status";
             statusHeader.Width = 150;
             // 
+            // btnAddTodo
+            // 
+            btnAddTodo.Location = new Point(1401, 26);
+            btnAddTodo.Name = "btnAddTodo";
+            btnAddTodo.Size = new Size(150, 46);
+            btnAddTodo.TabIndex = 3;
+            btnAddTodo.Text = "Add Task";
+            btnAddTodo.UseVisualStyleBackColor = true;
+            btnAddTodo.Click += AddTodo_Click;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(1401, 932);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(150, 46);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += Logout_Click;
+            // 
             // TodoScreen
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1605, 945);
+            ClientSize = new Size(1603, 1002);
+            ControlBox = false;
+            Controls.Add(btnLogout);
+            Controls.Add(btnAddTodo);
             Controls.Add(lvTodo);
-            Controls.Add(lblLastName);
-            Controls.Add(lblFirstName);
+            Controls.Add(lblName);
+            MinimizeBox = false;
             Name = "TodoScreen";
-            Text = "TodoScreen";
+            Text = "Todo";
             Load += TodoScreen_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -109,13 +124,14 @@
 
         #endregion
 
-        private Label lblFirstName;
-        private Label lblLastName;
+        private Label lblName;
         private ListView lvTodo;
         private ColumnHeader idHeader;
         private ColumnHeader titleHeader;
         private ColumnHeader descriptionHeader;
         private ColumnHeader statusHeader;
         private ColumnHeader createdAtHeader;
+        private Button btnAddTodo;
+        private Button btnLogout;
     }
 }

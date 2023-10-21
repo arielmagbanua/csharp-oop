@@ -18,14 +18,16 @@ namespace TodoApp.Screens
             var password = txtPassword.Text.Trim();
             var confirmPassword = txtConfirmPassword.Text.Trim();
 
-            if (!password.Equals(confirmPassword)) {
+            if (!password.Equals(confirmPassword))
+            {
                 txtPassword.Text = "";
                 txtConfirmPassword.Text = "";
                 MessageBox.Show("The password does not match", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (email.Equals("")) {
+            if (email.Equals(""))
+            {
                 MessageBox.Show("Email is required.", "Email Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -43,7 +45,8 @@ namespace TodoApp.Screens
             }
 
             var isValidEmail = new EmailAddressAttribute().IsValid(email);
-            if (!isValidEmail) {
+            if (!isValidEmail)
+            {
                 MessageBox.Show("Invalid email.", "Email Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -56,7 +59,8 @@ namespace TodoApp.Screens
 
             var insertedUser = DBHelper.Instance.CreateUser(newUser);
 
-            if (insertedUser == null) {
+            if (insertedUser == null)
+            {
                 MessageBox.Show("User failed to create.", "User Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -79,6 +83,11 @@ namespace TodoApp.Screens
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.CloseForm();
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

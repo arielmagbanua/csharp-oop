@@ -180,5 +180,38 @@ namespace TodoApp.Data
 
             return createTodoCommand.ExecuteNonQuery() > 0;
         }
+
+        public List<Todo> GetTodos(int userId)
+        {
+            var todoList = new List<Todo>();
+
+            var getTodosCommand = _connection?.CreateCommand();
+
+            getTodosCommand!.CommandText = $@"
+                SELECT * FROM todos WHERE user_id='{userId}'
+            ";
+
+            var reader = getTodosCommand.ExecuteReader();
+
+            while (reader.Read()) {
+                var todoId = reader.GetInt32(0);
+                var title = reader.GetString(2);
+                var description = reader.GetString(3);
+                var status = reader.GetInt32(4);
+                var createAt = reader.GetString(5);
+
+                Todo todo = new Todo();
+                todo.Id = todoId;
+                todo.UserId = userId;
+                todo.Title = title;
+                todo.Description = description;
+                todo.Status = status;
+                todo.CreateAt = createAt;
+
+                todoList.Add(todo);
+            }
+
+            return todoList;
+        }
     }
 }

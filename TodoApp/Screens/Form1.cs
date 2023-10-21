@@ -32,16 +32,26 @@ namespace TodoApp.Screens
                 return;
             }
 
-            if (!password.Equals(user.Password)) {
+            if (!password.Equals(user.Password))
+            {
                 MessageBox.Show("Invalid Credentials", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var todoScreen = new TodoScreen();
+            // clear the login email and password fields
+            txtLoginEmail.Text = "";
+            txtLoginPassword.Text = "";
+
+            var todoScreen = new TodoScreen(user);
             todoScreen.Tag = this;
             todoScreen.Show(this);
 
             this.Hide();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
