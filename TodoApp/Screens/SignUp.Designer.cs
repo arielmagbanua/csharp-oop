@@ -161,6 +161,7 @@
             Controls.Add(lblEmail);
             Controls.Add(lblLastName);
             Controls.Add(lblFirstName);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "SignUp";
             Text = "SignUp";
             Load += SignUp_Load;

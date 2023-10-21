@@ -81,6 +81,7 @@
             Controls.Add(btnSave);
             Controls.Add(txtDescription);
             Controls.Add(txtTitle);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "AddTaskScreen";
             Text = "Add Task";
             Load += AddTaskScreen_Load;

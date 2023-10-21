@@ -110,6 +110,7 @@
             Controls.Add(txtLoginEmail);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Login";
             Text = "Login";
             Load += Login_Load;

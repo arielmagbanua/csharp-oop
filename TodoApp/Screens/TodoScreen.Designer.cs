@@ -114,6 +114,7 @@
             Controls.Add(btnAddTodo);
             Controls.Add(lvTodo);
             Controls.Add(lblName);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MinimizeBox = false;
             Name = "TodoScreen";
             Text = "Todo";
